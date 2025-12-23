@@ -18,6 +18,5 @@ Software Architecture
     - Show trained values, desired outputs and real outputs
 4. Data
     - users: id, fullname, email, hashedpassword, mfa
-    - perceptrons: id, name, description, train_formula
-    - weights: id, perc_id, weight
+    - perceptrons: id, name, description, train_formula, weights, bias, user_id
 5. 
