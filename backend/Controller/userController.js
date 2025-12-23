@@ -1,4 +1,7 @@
 const { UserDA } = require("../Data_access");
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const configs = require("../Configs");
 
 const userController = {
     getAllUsers: async(req, res) => {
@@ -19,9 +22,29 @@ const userController = {
         if(existingUser) {
             return res.status(409).json({ message: "User already exists" });
         }
-        const newUser = { fullname, email, password };
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const newUser = { fullname, email, hashedPassword };
         const createdUser = await UserDA.create(newUser);
         res.status(201).json(createdUser);
+    },
+
+    login: async(req, res) => {
+        const { email, password } = req.body;
+        const allUsers = await UserDA.readAll();
+        const user = allUsers.find(u => u.email === email);
+        if(!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        const isPasswordValid = await bcrypt.compare(password, user.hashedPassword);
+        if(!isPasswordValid) {
+            return res.status(401).json({ message: "Invalid password" });
+        }
+        jwt.sign({ id: user.id, email: user.email }, configs.secretKey, { expiresIn: '1h' }, (err, token) => {;
+            if(err) {
+                return res.status(500).json({ message: "Error generating token" });
+            }
+            res.status(200).json({ message: "Login successful", user, token });
+        });
     }
 }
 
