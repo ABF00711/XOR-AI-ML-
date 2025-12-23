@@ -1,0 +1,23 @@
+AI_ML_Tester
+
+Software Architecture
+
+1. User problems
+    - Users want to see ML training and testing in real time environment visually
+    - Users want to see neural network and training formula and how they work
+    - Users want to see several different types of Perceptrons
+2. Target users
+    - Developers
+    - Students who is learning AI/ML
+3. Feature priorities
+    - Register/Login
+    - Choose any perceptron
+    - Show neural network of chosen perceptron
+    - Train neural network with default values or custom values
+    - Test trained neural network with default values or custom 
+    - Show trained values, desired outputs and real outputs
+4. Data
+    - users: id, fullname, email, hashedpassword, mfa
+    - perceptrons: id, name, description, train_formula
+    - weights: id, perc_id, weight
+5. 
