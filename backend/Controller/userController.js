@@ -4,6 +4,13 @@ const jwt = require('jsonwebtoken');
 const configs = require("../Configs");
 
 const userController = {
+    getFinalID: async() => {
+        const allUsers = await UserDA.readAll();
+        if(allUsers.length === 0) return 1;
+        const ids = allUsers.map(user => user.id);
+        return Math.max(...ids) + 1;
+    },
+
     getAllUsers: async(req, res) => {
         const users = await UserDA.readAll();
         if(users.length === 0) {
@@ -23,7 +30,8 @@ const userController = {
             return res.status(409).json({ message: "User already exists" });
         }
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = { fullname, email, hashedPassword };
+        const id = await userController.getFinalID();
+        const newUser = { id, fullname, email, hashedPassword };
         const createdUser = await UserDA.create(newUser);
         res.status(201).json(createdUser);
     },
