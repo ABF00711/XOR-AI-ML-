@@ -3,8 +3,8 @@ import useAuth from '../../Hook/useAuth';
 import "./index.css";
 
 function Dashboard() {
-    const { user, logout } = useAuth();
     const navigate = useNavigate();
+    const { user, logout } = useAuth();
 
     const handleLogout = () => {
         logout();
@@ -93,36 +93,6 @@ function Dashboard() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>0.43</td>
-                                            <td>0.245</td>
-                                            <td><button>Test</button></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>0.43</td>
-                                            <td>0.245</td>
-                                            <td><button>Test</button></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>0.43</td>
-                                            <td>0.245</td>
-                                            <td><button>Test</button></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>0.43</td>
-                                            <td>0.245</td>
-                                            <td><button>Test</button></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>0.43</td>
-                                            <td>0.245</td>
-                                            <td><button>Test</button></td>
-                                            <td></td>
-                                        </tr>
                                         
                                     </tbody>
                                 </table>
