@@ -46,7 +46,7 @@ function Dashboard() {
                                         <input type="number" step="0.01" min="0.01" max="1.0" defaultValue="0.1" />
                                     </div>
                                     <div className='trainNumber'>
-                                        <label>Number of Trainings:</label>
+                                        <label>Epochs:</label>
                                         <input type="number" min="1" max="10000" defaultValue="1000" />
                                     </div>
                                     <div className='train_btn'>
@@ -78,7 +78,55 @@ function Dashboard() {
                             </div>
                         </div>
                         <div className='trainingResult'>
-            
+                            <div className='resultHeader'>
+                                <h2>Training Results</h2>
+                                <p>Epochs Trained: 1000</p>
+                            </div>
+                            <div className='resultContent'>
+                                <table className='resultTable'>
+                                    <thead>
+                                        <tr>
+                                            <th>W1</th>
+                                            <th>W2</th>
+                                            <th>Test</th>
+                                            <th>Output</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
