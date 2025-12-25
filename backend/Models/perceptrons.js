@@ -14,6 +14,10 @@ const perceptronSchema = new mongoose.Schema({
         type: String,
         required: false
     },
+    function: {
+        type: String,
+        required: true
+    },
     train_formula: {
         type: String,
         required: true
