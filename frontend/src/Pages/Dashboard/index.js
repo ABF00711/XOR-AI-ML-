@@ -1,31 +1,12 @@
-import { useNavigate } from 'react-router-dom';
-import useAuth from '../../Hook/useAuth';
+import Layout from '../../Layout';
 import "./index.css";
 
 function Dashboard() {
-    const { user, logout } = useAuth();
-    const navigate = useNavigate();
-
-    const handleLogout = () => {
-        logout();
-        navigate('/');
-    };
-
     return (
-        <div className="dashboard-page">
-            <div className="dashboard-content">
-                <nav className="dashboard-nav">
-                    <div className="nav-brand">
-                        <h2>XOR Neural Network</h2>
-                    </div>
-                    <div className="nav-user">
-                        <span>Welcome, {user?.fullname || 'User'}</span>
-                        <button onClick={handleLogout} className="logout-btn">
-                            Logout
-                        </button>
-                    </div>
-                </nav>
-                <div className="dashboard-main">
+        <Layout>
+            <div className="dashboard-page">
+                <div className="dashboard-content">
+                    <div className="dashboard-main">
                     <div className="perceptron">
                         <div className="title">XOR Neural Network</div>
                         <div className="function">f(x₁, x₂) = x₁ ⊕ x₂</div>
@@ -123,15 +104,28 @@ function Dashboard() {
                                             <td><button>Test</button></td>
                                             <td></td>
                                         </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
                                         
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Layout>
     );
 }
 
