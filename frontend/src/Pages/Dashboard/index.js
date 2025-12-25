@@ -16,30 +16,34 @@ function Dashboard() {
                         </div>
                     </div>
                     <div className='training'>
-                        <div className='training-content'>
-                            <div className='default_training'>
-                                <div className='trainingOption'>
-                                    <h2>Default Training Settings</h2>
-                                </div>
-                                <div className='trainingData'>
+                        <div className='training-settings'>
+                            <div className='trainingOption'>
+                                <h2>Training Settings</h2>
+                            </div>
+                            <div className='trainingData'>
+                                {/* Section 1: Learning Rate */}
+                                <div className='training-section'>
                                     <div className='learningRate'>
                                         <label>Learning Rate:</label>
                                         <input type="number" step="0.01" min="0.01" max="1.0" defaultValue="0.1" />
                                     </div>
+                                    <div className='section-divider'></div>
+                                </div>
+
+                                {/* Section 2: Epochs + Auto Training */}
+                                <div className='training-section'>
                                     <div className='trainNumber'>
                                         <label>Epochs:</label>
                                         <input type="number" min="1" max="10000" defaultValue="1000" />
                                     </div>
                                     <div className='train_btn'>
-                                        <button>Start Training</button>
+                                        <button>Auto Training</button>
                                     </div>
+                                    <div className='section-divider'></div>
                                 </div>
-                            </div>
-                            <div className='custom_training'>
-                                <div className='trainingOption'>
-                                    <h2>Custom Training Settings</h2>
-                                </div>
-                                <div className='trainingData'>
+
+                                {/* Section 3: Custom Training */}
+                                <div className='training-section'>
                                     <div className='input_value'>
                                         <label>X1 Value:</label>
                                         <input type="number" min="0" max="1" step="1" defaultValue="0" />
@@ -53,7 +57,7 @@ function Dashboard() {
                                         <input type="number" min="0" max="1" step="1" defaultValue="0" />
                                     </div>
                                     <div className='customTrain_btn'>
-                                        <button>Start Training</button>
+                                        <button>Training</button>
                                     </div>
                                 </div>
                             </div>
@@ -74,6 +78,90 @@ function Dashboard() {
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.43</td>
+                                            <td>0.245</td>
+                                            <td><button>Test</button></td>
+                                            <td></td>
+                                        </tr>
                                         <tr>
                                             <td>0.43</td>
                                             <td>0.245</td>

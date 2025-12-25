@@ -169,7 +169,7 @@ body {
 
 .training {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 60%;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
@@ -183,9 +183,7 @@ body {
 }
 
 .training-content {
-    display: flex;
     width: 100%;
-    gap: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -194,8 +192,7 @@ body {
     box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
 }
 
-.default_training {
-    flex: 1;
+.training-settings {
     padding: 1.5rem;
     background: var(--bg-tertiary);
     border-radius: var(--border-radius);
@@ -203,22 +200,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.custom_training {
-    flex: 1;
-    padding: 1.5rem;
-    background: var(--bg-tertiary);
-    border-radius: var(--border-radius);
-    border: 2px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 50%;
 }
 
 .trainingOption h2 {
     color: var(--primary-color);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -241,7 +228,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+}
+
+.training-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.section-divider {
+    width: 100%;
+    height: 0;
+    border-top: 2px dotted var(--border-color);
+    margin: 1rem 0;
+    opacity: 0.6;
+    background-color: #4f46e5;
 }
 
 .learningRate,
@@ -251,6 +255,7 @@ body {
     align-items: center;
     justify-content: space-between;
     min-width: 300px;
+    width: 80%;
 }
 
 .learningRate label,
@@ -274,8 +279,7 @@ body {
 
 .learningRate input:focus,
 .trainNumber input:focus,
-.X1_value input:focus,
-.X2_value input:focus {
+.input_value input:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
@@ -285,6 +289,8 @@ body {
 .customTrain_btn {
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
 }
 
 .train_btn button,
@@ -301,6 +307,8 @@ body {
     box-shadow: var(--shadow-md);
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 300px;
 }
 
 .train_btn button::before,
@@ -340,6 +348,7 @@ body {
     box-shadow: var(--shadow-lg);
     padding: 1rem;
     transition: var(--transition);
+    width: 50%;
 }
 
 .trainingResult:hover {
@@ -381,7 +390,7 @@ body {
 
 .resultContent {
     width: 100%;
-    max-height: 280px; /* Height to show at least 5 rows (header + 5 rows) */
+    max-height: 500px; /* Height to show at least 5 rows (header + 5 rows) */
     overflow-y: auto;
     overflow-x: auto;
     border-radius: var(--border-radius);
@@ -547,9 +556,10 @@ body {
 
 .resultHeader{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: .5rem;
 }
 
 /* Animations */
@@ -587,20 +597,19 @@ body {
     .training {
         width: 100%;
     }
-
-    .training-content {
-        gap: 1.5rem;
-    }
-
-    .default_training,
-    .custom_training {
-        width: 100%;
-    }
 }
 
 @media (max-width: 900px) {
-    .training-content {
+    .training {
         flex-direction: column;
+    }
+
+    .training-settings {
+        width: 100%;
+    }
+
+    .trainingResult {
+        width: 100%;
     }
 }
 
@@ -693,8 +702,7 @@ body {
         padding: 1.5rem;
     }
 
-    .default_training,
-    .custom_training {
+    .training-settings {
         padding: 1rem;
     }
 
