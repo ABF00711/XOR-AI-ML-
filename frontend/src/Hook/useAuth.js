@@ -25,11 +25,16 @@ const useAuth = () => {
         }
     }
 
+    const logout = () => {
+        setUser(null);
+    }
+
     return {
         user,
         setUser,
         register,
-        login
+        login,
+        logout
     };
 }
 

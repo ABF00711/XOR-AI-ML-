@@ -34,6 +34,53 @@ function Dashboard() {
                             <img src="/images/NN(XOR).png" alt="XOR Neural Network Diagram" />
                         </div>
                     </div>
+                    <div className='training'>
+                        <div className='training-content'>
+                            <div className='default_training'>
+                                <div className='trainingOption'>
+                                    <h2>Default Training Settings</h2>
+                                </div>
+                                <div className='trainingData'>
+                                    <div className='learningRate'>
+                                        <label>Learning Rate:</label>
+                                        <input type="number" step="0.01" min="0.01" max="1.0" defaultValue="0.1" />
+                                    </div>
+                                    <div className='trainNumber'>
+                                        <label>Number of Trainings:</label>
+                                        <input type="number" min="1" max="10000" defaultValue="1000" />
+                                    </div>
+                                    <div className='train_btn'>
+                                        <button>Start Training</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='custom_training'>
+                                <div className='trainingOption'>
+                                    <h2>Custom Training Settings</h2>
+                                </div>
+                                <div className='trainingData'>
+                                    <div className='input_value'>
+                                        <label>X1 Value:</label>
+                                        <input type="number" min="0" max="1" step="1" defaultValue="0" />
+                                    </div>
+                                    <div className='input_value'>
+                                        <label>X2 Value:</label>
+                                        <input type="number" min="0" max="1" step="1" defaultValue="0" />
+                                    </div>
+                                    <div className='input_value'>
+                                        <label>Desired Output:</label>
+                                        <input type="number" min="0" max="1" step="1" defaultValue="0" />
+                                    </div>
+                                    <div className='customTrain_btn'>
+                                        <button>Start Training</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='trainingResult'>
+            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
